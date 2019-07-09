@@ -12,7 +12,7 @@ How to start test execution in IDE:
 2. To run separate package/class: make right click on package/class file > Run with testNG  
 
 How to start test execution in cmd or terminal:  
-0. Open cmd or terminal :wink:  
+0. Open cmd or terminal 
 1. go to local root project directory   
 2. execute next command:  
 ```  mvn clean test  ```  - to run full suite   
