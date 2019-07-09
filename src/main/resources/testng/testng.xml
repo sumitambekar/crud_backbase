@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CRUD computers regression suite" verbose="1" parallel="tests" thread-count="5">
+
+    <test name="Company creation tests" parallel="classes">
+        <classes>
+             <class name="com.crud.uiTests.CRUDComputerFlow"/>
+             <class name="com.crud.uiTests.FieldsValidationTests"/>
+             <class name="com.crud.uiTests.OtherComputerCreationTests"/>
+        </classes>
+    </test>
+
+</suite>
