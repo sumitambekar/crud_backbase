@@ -103,17 +103,14 @@ public class WebdriverManager {
 
         String chromeDriverPath = os.getChromeDriverPath();
 
-        //opening inputStream
         InputStream inputStream = Optional
                 .ofNullable(getSystemResourceAsStream(chromeDriverPath))
                 .orElseThrow(() -> new IllegalStateException(
                         "Cannot locate driver on classpath (missing dependency): " + chromeDriverPath));
         try {
-            //copying chromeDriver to temp file
             File temp = File.createTempFile(os.chromePath, os.suffix);
             temp.setExecutable(true);
             FileUtils.copyInputStreamToFile(inputStream, temp);
-            //setting path to temp chromeDriver to sys properties
             System.setProperty(browserSystemVariable, temp.getAbsolutePath());
 
         } catch (IOException e) {
